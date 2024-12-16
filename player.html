@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>danivexil - Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Music Player Section -->
+    <div id="musicPlayer">
+        <h2>Music Player</h2>
+
+        <!-- Song Image -->
+        <div id="songImageContainer">
+            <img id="songImage" src="song1.jpg" alt="Song Image">
+        </div>
+
+        <!-- Select Song -->
+        <div id="songSelectContainer">
+            <label for="songSelect">Select Song:</label>
+            <select id="songSelect" onchange="changeSong()">
+                <option value="song1.mp3" data-image="song1.jpg">Song 1</option>
+                <option value="song2.mp3" data-image="song2.jpg">Song 2</option>
+            </select>
+        </div>
+
+        <!-- Play / Pause Button -->
+        <div class="controlButton" id="playPauseButton">
+            <span class="icon" id="playIcon">▶️</span>
+        </div>
+
+        <!-- Volume Control -->
+        <div id="volumeControl">
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" value="100" max="100" />
+        </div>
+
+        <!-- Progress Bar -->
+        <div id="progressBarContainer">
+            <input type="range" id="progressBar" value="0" max="100" step="1" />
+        </div>
+
+        <audio id="audioPlayer" src="song1.mp3" controls></audio>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2024 danivexil Team
+    </footer>
+
+    <!-- Right Sidebar Navigation (Similar to index.html) -->
+    <div id="navBar">
+        <div id="navItems">
+            <span id="home"><a href="index.html">Home</a></span>
+            <span id="about"><a href="about.html">About</a></span>
+            <span id="music"><a href="player.html">Music</a></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
