@@ -1,171 +1,6 @@
 /* General page styling */
 body {
-    background: linear-gradient(45deg, #3498db, #8e44ad, #f39c12, #2ecc71); /* Live gradient background */
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    color: white;
-    text-align: center;
-    overflow: hidden;
-}
-
-/* 3D Vertical Navigation Bar */
-#navBar {
-    position: absolute;
-    top: 20%;
-    right: 0;
-    width: 80px; /* Width of the vertical bar */
-    height: 60%;
-    border-radius: 10px;
-    border: 3px solid #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    transform-origin: right center; /* Set the center of the rotation */
-}
-
-#navItems {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#navItems span {
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    color: #fff;
-    margin: 10px 0;
-}
-
-#navItems span:hover {
-    transform: scale(1.3);
-}
-
-/* Music Player Styling */
-#musicPlayer {
-    margin-top: 100px;
-    text-align: center;
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: white;
-}
-
-/* Song Image Styling */
-#songImageContainer {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-}
-
-#songImage {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Circle */
-    border: 4px solid #fff;
-    transition: transform 1s ease-in-out;
-}
-
-/* Control Button Styling */
-.controlButton {
-    display: inline-block;
-    background-color: #3498db;
-    padding: 10px 20px;
-    margin: 20px 0;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.controlButton:hover {
-    background-color: #2ecc71;
-}
-
-.icon {
-    font-size: 2rem;
-    color: white;
-}
-
-/* Volume Control Styling */
-#volumeControl {
-    margin: 20px 0;
-    font-size: 1rem;
-}
-
-#volumeControl input {
-    width: 200px;
-}
-
-/* Progress Bar Styling */
-#progressBarContainer {
-    width: 100%;
-    margin-top: 20px;
-}
-
-#progressBar {
-    width: 100%;
-    cursor: pointer;
-    appearance: none;
-    height: 10px;
-    border-radius: 5px;
-    background: transparent; /* Remove white color */
-}
-
-#progressBar::-webkit-slider-thumb {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #3498db;
-    border-radius: 50%;
-}
-
-#progressBar::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #3498db;
-    border-radius: 50%;
-}
-
-/* Footer Styling */
-footer {
-    position: absolute;
-    bottom: 10px;
-    font-size: 14px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 5px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Animation for rotating the song image */
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-/* General page styling */
-body {
-  background: linear-gradient(45deg, #3498db, #8e44ad, #f39c12, #2ecc71); /* Live gradient background */
+  background: #7f8c8d; /* رنگ طوسی که می‌خوای */
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
@@ -182,397 +17,238 @@ body {
 
 /* Fade-in effect for background */
 @keyframes fadeInBackground {
-  0% {
-      background: transparent;
-  }
-  100% {
-      background: linear-gradient(45deg, #3498db, #8e44ad, #f39c12, #2ecc71);
-  }
+0% {
+    background: transparent;
+}
+100% {
+    background: #7f8c8d;
+}
 }
 
 /* 3D Vertical Navigation Bar Styling */
 #navBar {
-  position: absolute;
-  top: 20%;
-  left: 20px;
-  width: 80px;
-  height: 60%;
-  border-radius: 10px;
-  border: 3px solid #fff;
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  transform-origin: right center;
-  transition: all 0.3s ease-in-out;
-  opacity: 0;
-  animation: slideInNavBar 1s forwards; /* Slide-in animation for the navigation bar */
+position: absolute;
+top: 20%;
+left: 20px;
+width: 80px;
+height: 60%;
+border-radius: 10px;
+border: 3px solid #fff;
+background-color: #000;
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+transform-origin: right center;
+transition: all 0.3s ease-in-out;
+opacity: 0;
+animation: slideInNavBar 1s forwards; /* Slide-in animation for the navigation bar */
 }
 
 @keyframes slideInNavBar {
-  0% {
-      transform: translateX(-100%);
-      opacity: 0;
-  }
-  100% {
-      transform: translateX(0);
-      opacity: 1;
-  }
+0% {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+100% {
+    transform: translateX(0);
+    opacity: 1;
+}
 }
 
 /* Navigation Items */
 #navItems {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+position: relative;
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
 }
 
 #navItems span {
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  color: #fff;
-  margin: 10px 0;
+font-size: 18px;
+font-weight: bold;
+cursor: pointer;
+transition: transform 0.3s ease-in-out;
+color: #fff;
+margin: 10px 0;
 }
 
 #navItems span:hover {
-  transform: scale(1.3);
+transform: scale(1.3);
 }
 
 /* Main Content Section Styling */
 #mainContent {
-  margin-top: 100px;
-  text-align: center;
-  width: 100%;
-  max-width: 600px;
-  padding: 20px;
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.5); /* Glass effect */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  animation: fadeInMainContent 2s 1s forwards; /* Fade-in effect for main content */
+margin-top: 100px;
+text-align: center;
+width: 100%;
+max-width: 600px;
+padding: 20px;
+border-radius: 20px;
+background-color: rgba(0, 0, 0, 0.5); /* Glass effect */
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+opacity: 0;
+animation: fadeInMainContent 2s 1s forwards; /* Fade-in effect for main content */
 }
 
 /* Fade-in effect for main content */
 @keyframes fadeInMainContent {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
 }
 
 /* Glass Effect */
 .glassEffect {
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
-  padding: 40px;
-  border-radius: 15px;
-  backdrop-filter: blur(8px); /* Glass effect with blur */
-  border: 1px solid rgba(255, 255, 255, 0.2);
+background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+padding: 40px;
+border-radius: 15px;
+backdrop-filter: blur(8px); /* Glass effect with blur */
+border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Large Text */
 .glassEffect h1 {
-  font-size: 4rem;
-  color: white;
+font-size: 4rem;
+color: white;
 }
 
 .glassEffect p {
-  font-size: 1.5rem;
-  color: white;
+font-size: 1.5rem;
+color: white;
 }
 
 /* Footer Styling */
 footer {
-  position: absolute;
-  bottom: 10px;
-  font-size: 14px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 5px;
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-  animation: fadeInFooter 2s 1s forwards; /* Fade-in effect for footer */
+position: absolute;
+bottom: 10px;
+font-size: 14px;
+color: white;
+background-color: rgba(0, 0, 0, 0.8);
+padding: 5px;
+width: 100%;
+text-align: center;
+opacity: 0;
+animation: fadeInFooter 2s 1s forwards; /* Fade-in effect for footer */
 }
 
 /* Fade-in effect for footer */
 @keyframes fadeInFooter {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
 }
 
 /* Music Player Styling */
 #musicPlayer {
-  margin-top: 100px;
-  text-align: center;
-  width: 100%;
-  max-width: 600px;
-  padding: 20px;
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+margin-top: 100px;
+text-align: center;
+width: 100%;
+max-width: 600px;
+padding: 20px;
+border-radius: 20px;
+background-color: rgba(0, 0, 0, 0.7);
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: white;
+font-size: 2.5rem;
+margin-bottom: 20px;
+color: white;
 }
 
 /* Song Image Styling */
 #songImageContainer {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
+display: flex;
+justify-content: center;
+margin: 20px;
 }
 
 #songImage {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  transition: transform 1s ease-in-out;
+width: 150px;
+height: 150px;
+border-radius: 50%; /* Circle */
+border: 4px solid #fff;
+transition: transform 1s ease-in-out;
 }
 
 /* Control Button Styling */
 .controlButton {
-  display: inline-block;
-  background-color: #3498db;
-  padding: 10px 20px;
-  margin: 20px 0;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s;
+display: inline-block;
+background-color: #3498db;
+padding: 10px 20px;
+margin: 20px 0;
+border-radius: 50%;
+cursor: pointer;
+transition: background-color 0.3s;
 }
 
 .controlButton:hover {
-  background-color: #2ecc71;
+background-color: #2ecc71;
 }
 
 .icon {
-  font-size: 2rem;
-  color: white;
+font-size: 2rem;
+color: white;
 }
 
 /* Volume Control Styling */
 #volumeControl {
-  margin: 20px 0;
-  font-size: 1rem;
+margin: 20px 0;
+font-size: 1rem;
 }
 
 #volumeControl input {
-  width: 200px;
+width: 200px;
 }
 
 /* Progress Bar Styling */
 #progressBarContainer {
-  width: 100%;
-  margin-top: 20px;
+width: 100%;
+margin-top: 20px;
 }
 
 #progressBar {
-  width: 100%;
-  cursor: pointer;
-  appearance: none;
-  height: 10px;
-  border-radius: 5px;
-  background: transparent;
+width: 100%;
+cursor: pointer;
+appearance: none;
+height: 10px;
+border-radius: 5px;
+background: transparent; /* Remove white color */
 }
 
 #progressBar::-webkit-slider-thumb {
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  background: #3498db;
-  border-radius: 50%;
+appearance: none;
+width: 20px;
+height: 20px;
+background: #3498db;
+border-radius: 50%;
 }
 
 #progressBar::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  background: #3498db;
-  border-radius: 50%;
+width: 20px;
+height: 20px;
+background: #3498db;
+border-radius: 50%;
 }
 
 /* Footer Styling */
 footer {
-  position: absolute;
-  bottom: 10px;
-  font-size: 14px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 5px;
-  width: 100%;
-  text-align: center;
-}
-/* General page styling */
-body {
-  background: linear-gradient(45deg, #1b1b1b, #2c3e50, #1b1b1b, #2c3e50); /* Keep the original background */
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  color: white;
-  text-align: center;
-  overflow: hidden;
-}
-
-/* 3D Vertical Navigation Bar */
-#navBar {
-  position: fixed;
-  top: 20%;
-  left: 0;
-  width: 80px; /* Width of the vertical bar */
-  height: 60%; /* Height of the vertical bar */
-  background-color: #1b1b1b; /* Dark background for the bar */
-  border-radius: 10px 0 0 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
-  transform-origin: left center;
-  transition: transform 0.3s ease-in-out;
-}
-
-#navItems {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
-#navItems span {
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin: 20px 0;
-  position: relative;
-  transition: transform 0.3s ease-in-out, color 0.3s, box-shadow 0.3s ease-in-out;
-}
-
-/* Hover effect on Navigation Items */
-#navItems span a {
-  color: inherit;
-  text-decoration: none;
-}
-
-#navItems span:hover {
-  transform: translateX(10px);
-  color: #f39c12; /* Yellow color */
-  box-shadow: 0 0 15px 5px rgba(243, 156, 18, 0.8); /* Glowing yellow effect */
-}
-
-#navItems span:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -5px;
-  left: 0;
-  background-color: #f39c12; /* Yellow underline */
-  opacity: 0;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.4s ease, opacity 0.3s ease;
-}
-
-#navItems span:hover:before {
-  opacity: 1;
-  transform: scaleX(1);
-}
-
-/* Main Content Styling */
-#mainContent {
-  margin-top: 100px;
-  text-align: center;
-  width: 100%;
-  max-width: 600px;
-  padding: 20px;
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.6); /* Glass effect */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-/* Glass Effect */
-.glassEffect {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 40px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px); /* Glass effect with blur */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.glassEffect h1 {
-  font-size: 4rem;
-  color: white;
-}
-
-.glassEffect p {
-  font-size: 1.5rem;
-  color: white;
-}
-
-/* Footer Styling */
-footer {
-  position: absolute;
-  bottom: 10px;
-  font-size: 14px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 5px;
-  width: 100%;
-  text-align: center;
-}
-/* Add this to ensure the page is scrollable */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-y: auto; /* Enable vertical scrolling */
-}
-
-#mainContent {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  overflow-y: auto; /* Ensure content inside is scrollable */
-  background: rgba(255, 255, 255, 0.8); /* Transparent glass effect */
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-#mainContent {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0); /* Transparent background */
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
-}
-
-.glassEffect {
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent glass effect */
-  backdrop-filter: blur(10px); /* Blur effect for a glass look */
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+position: absolute;
+bottom: 10px;
+font-size: 14px;
+color: white;
+background-color: rgba(0, 0, 0, 0.8);
+padding: 5px;
+width: 100%;
+text-align: center;
 }
